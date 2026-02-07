@@ -3,6 +3,7 @@ package org.example;
 
 import java.util.Scanner;
 
+import static org.example.GameController.restartGame;
 import static org.example.GuessValidator.validateGuess;
 import static org.example.HintService.hintGenerate;
 import static org.example.StorageService.storeDatasTofile;
@@ -10,6 +11,7 @@ import static org.example.ValidationService.validateNumber;
 
 public class GuessingApp {
     public static void main(String[] args) throws Exception {
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Welcome to Number-Guessing Application");
 
@@ -23,6 +25,8 @@ public class GuessingApp {
         int attempts=0;
         int hint=0;
         int win=0;
+
+        do{
         do{
             attempts++;
             System.out.println("Enter your guess: ");
@@ -44,8 +48,10 @@ public class GuessingApp {
         if(attempts==7){
             System.out.println("Thank you for playing!\n" +
                     "You have reached Maximum Number of attempts");
-            return;
+
         }
+        }while(restartGame(sc));
 
     }
+
 }
