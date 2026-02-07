@@ -2,3 +2,11 @@ Player Name: pavi
 Attempts: 2
 Results: Win
 
+Player Name: pavi
+Attempts: 7
+Results: Loss
+
+Player Name: hdif
+Attempts: 7
+Results: Loss
+
